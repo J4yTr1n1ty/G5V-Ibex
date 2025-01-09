@@ -192,4 +192,9 @@ const router = new VueRouter({
   routes
 });
 
+router.beforeEach((to, from, next) => {
+  document.title = "Ibex Gaming League - " + to.name;
+  next();
+});
+
 export default router;
