@@ -8,18 +8,18 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: colors.blue,
-        secondary: colors.blueGrey.darken1,
+        primary: "#D18F45",
+        secondary: colors.grey.darken2,
         accent: colors.shades.black,
         error: colors.red.accent3,
         background: colors.lightBlue.lighten4,
-        footer: colors.lightBlue
+        footer: colors.lightBlue,
       },
       dark: {
-        primary: colors.teal,
+        primary: "#D18F45",
         background: colors.grey.darken3,
-        footer: colors.teal
-      }
-    }
-  }
+        footer: colors.teal,
+      },
+    },
+  },
 });

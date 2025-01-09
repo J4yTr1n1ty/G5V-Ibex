@@ -3,7 +3,7 @@
     <v-system-bar color="primary darken-3"></v-system-bar>
     <v-app-bar app color="primary" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>{{ $t("Navbar.title") }}</v-toolbar-title>
+      <v-toolbar-title>Ibex Gaming League</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn rounded :href="apiUrl + '/auth/steam'" v-if="user.id == null">
         <img src="/img/login_small.png" v-if="user.id == null" />
@@ -41,7 +41,7 @@
         <span>{{ $t("Login.title") }}</span>
       </v-tooltip>
       <v-btn :to="'/user/' + user.id" v-if="user.id !== null" fab small>
-        <img :src="user.small_image" style="border-radius: 15px;" />
+        <img :src="user.small_image" style="border-radius: 15px" />
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" temporary fixed app>
@@ -126,11 +126,11 @@ import LoginDialog from "./LoginDialog";
 export default {
   name: "Navbar",
   props: {
-    user: Object
+    user: Object,
   },
   components: {
     ServerDialog,
-    LoginDialog
+    LoginDialog,
   },
   data() {
     return {
@@ -138,13 +138,13 @@ export default {
       group: null,
       newDialog: false,
       loginDialog: false,
-      apiUrl: process.env?.VUE_APP_G5V_API_URL || "/api"
+      apiUrl: process.env?.VUE_APP_G5V_API_URL || "/api",
     };
   },
   watch: {
     group() {
       this.drawer = false;
-    }
-  }
+    },
+  },
 };
 </script>
